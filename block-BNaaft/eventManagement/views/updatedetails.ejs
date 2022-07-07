@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Management</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <header>
+    <nav class="center container">
+        <ul>
+            <li>
+                <a href="/">Event Management</a>
+            </li>
+        </ul>
+        <ul class="flex link">
+            <li>
+                <a href="/event">All Events</a>
+            </li>
+            <li>
+                <a href="/event/new">Add event</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <fieldset class="form">
+            <form action="/event/<%= event.id %>" method="post">
+                <input type="text" name="title" placeholder="Enter title" value="<%= event.title %>" />
+                <input
+                    type="text"
+                    name="summary"
+                    id=""
+                    placeholder="Enter Summary"
+                    value="<%= event.summary %>"
+                />
+                <input
+                    type="text"
+                    name="host"
+                    id=""
+                    placeholder="Enter host"
+                    value="<%= event.host %>"
+                />
+                <label for="startDate">Enter Event Start Date:</label>
+                <input
+                    type="date"
+                    class="date"
+                    name="start_date"
+                    id="startDate"
+                    placeholder="Enter Date"
+                    value="<%= event.start_date %>"
+                />
+                <label for="endDate">Enter End Date:</label>
+                <input
+                    type="date"
+                    class="date"
+                    name="end_date"
+                    id="endDate"
+                    placeholder="Enter Date"
+                    value="<%= event.end_date %>"
+                />
+                <input
+                    type="text"
+                    name="eventCategory"
+                    placeholder="Enter Event Category"
+                    value="<%= event.eventCategory %>"
+                />
+                <input
+                    type="text"
+                    name="location"
+                    id=""
+                    placeholder="Enter Location of event"
+                    value="<%= event.location %>"
+                />
+                <input class="submit" type="submit" value="Submit" />
+            </form>
+        </fieldset>
+    </main>
+</body>
+</html>

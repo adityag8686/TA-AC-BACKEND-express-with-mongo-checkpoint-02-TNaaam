@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Management</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <header>
+        <nav class="center container">
+            <ul>
+                <li>
+                    <a href="/">Event Management</a>
+                </li>
+            </ul>
+            <ul class="flex link">
+                <li>
+                    <a href="/event">All Events</a>
+                </li>
+                <li>
+                <a href="/event/new">Add event</a>
+                </li>
+            </ul>
+    </header>
+    <main>
+        <div class="container remark">
+            <form action="/remark/<%= remark.id%>/update" method="post">
+                <textarea name="content" id="" cols="30" rows="10" placeholder="Enter Remark ">
+                <%= remark.content%>
+                </textarea>
+                <input type="submit" value="Update" />
+            </form>
+    </main>
+</body>
+</html>

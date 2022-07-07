@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Management</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <header>
+    <nav class="center container">
+        <ul>
+            <li>
+                <a href="/">Event Management</a>
+            </li>
+        </ul>
+        <ul class="flex link">
+            <li>
+                <a href="/event">All Events</a>
+            </li>
+            <li>
+                <a href="/event/new">Add event</a>
+            </li>
+        </ul>
+    </nav>    
+    </header>
+    <main>
+        <section class="container center">
+            <div class="flex allevent ">
+                <% event.forEach((e) => { %>
+                <div class="event ">
+                    <h2>Title: <%= e.title%></h2>
+                    <p>Summary: <%= e.summary%></p>
+                    <p>Host: <%= e.host%></p>
+                    <p>Location: <%= e.location%></p>
+                    <a href="/event/<%= e.id %>">
+                        <button>Read More</button>
+                    </a>
+                </div>
+            <% }) %>
+            </div>
+    </main>
+</body>
+</html>
